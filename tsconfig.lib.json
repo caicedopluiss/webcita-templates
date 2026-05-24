@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "allowImportingTsExtensions": false,
+    "declaration": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src/lib.ts", "src/templates"]
+}

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280">
+  <!-- Background -->
+  <rect width="400" height="280" fill="#f1f5f9"/>
+
+  <!-- Hero section -->
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3c72"/>
+      <stop offset="60%" style="stop-color:#2a5298"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="ctaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3c72"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Hero bg -->
+  <rect width="400" height="110" fill="url(#heroGrad)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="360" cy="20" r="55" fill="rgba(255,255,255,0.05)"/>
+  <circle cx="330" cy="70" r="30" fill="rgba(255,255,255,0.04)"/>
+
+  <!-- Badge pill -->
+  <rect x="155" y="18" width="90" height="14" rx="7" fill="rgba(255,255,255,0.18)"/>
+  <rect x="163" y="23" width="74" height="4" rx="2" fill="rgba(255,255,255,0.6)"/>
+
+  <!-- Headline -->
+  <rect x="80" y="40" width="240" height="10" rx="3" fill="rgba(255,255,255,0.9)"/>
+  <rect x="110" y="56" width="180" height="7" rx="2" fill="rgba(255,255,255,0.7)"/>
+
+  <!-- Tagline -->
+  <rect x="70" y="72" width="260" height="5" rx="2" fill="rgba(255,255,255,0.45)"/>
+  <rect x="90" y="81" width="220" height="5" rx="2" fill="rgba(255,255,255,0.35)"/>
+
+  <!-- CTA Button -->
+  <rect x="140" y="93" width="120" height="18" rx="9" fill="rgba(255,255,255,0.92)"/>
+  <rect x="163" y="99" width="74" height="6" rx="3" fill="#2563EB"/>
+
+  <!-- Stats bar -->
+  <rect x="0" y="110" width="400" height="38" fill="white"/>
+
+  <!-- 4 stat blocks -->
+  <!-- Stat 1 -->
+  <rect x="30" y="119" width="30" height="8" rx="2" fill="#1e3c72"/>
+  <rect x="25" y="130" width="40" height="5" rx="1.5" fill="#94a3b8"/>
+  <!-- Stat 2 -->
+  <rect x="128" y="119" width="30" height="8" rx="2" fill="#2563EB"/>
+  <rect x="123" y="130" width="40" height="5" rx="1.5" fill="#94a3b8"/>
+  <!-- Stat 3 -->
+  <rect x="226" y="119" width="30" height="8" rx="2" fill="#1e3c72"/>
+  <rect x="221" y="130" width="40" height="5" rx="1.5" fill="#94a3b8"/>
+  <!-- Stat 4 -->
+  <rect x="324" y="119" width="30" height="8" rx="2" fill="#2563EB"/>
+  <rect x="319" y="130" width="40" height="5" rx="1.5" fill="#94a3b8"/>
+
+  <!-- Dividers between stats -->
+  <line x1="100" y1="118" x2="100" y2="146" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="200" y1="118" x2="200" y2="146" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="300" y1="118" x2="300" y2="146" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Features section -->
+  <rect x="0" y="148" width="400" height="88" fill="#f8fafc"/>
+
+  <!-- Section title -->
+  <rect x="130" y="156" width="140" height="8" rx="2" fill="#0f172a"/>
+  <rect x="150" y="168" width="100" height="5" rx="1.5" fill="#94a3b8"/>
+
+  <!-- 3 feature cards -->
+  <!-- Card 1 -->
+  <rect x="18" y="180" width="110" height="48" rx="6" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="28" y="190" width="14" height="14" rx="4" fill="#dbeafe"/>
+  <rect x="28" y="207" width="80" height="5" rx="1.5" fill="#1e293b"/>
+  <rect x="28" y="215" width="70" height="4" rx="1.5" fill="#94a3b8"/>
+  <rect x="28" y="221" width="60" height="4" rx="1.5" fill="#94a3b8"/>
+
+  <!-- Card 2 -->
+  <rect x="145" y="180" width="110" height="48" rx="6" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="155" y="190" width="14" height="14" rx="4" fill="#dbeafe"/>
+  <rect x="155" y="207" width="80" height="5" rx="1.5" fill="#1e293b"/>
+  <rect x="155" y="215" width="70" height="4" rx="1.5" fill="#94a3b8"/>
+  <rect x="155" y="221" width="60" height="4" rx="1.5" fill="#94a3b8"/>
+
+  <!-- Card 3 -->
+  <rect x="272" y="180" width="110" height="48" rx="6" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="282" y="190" width="14" height="14" rx="4" fill="#dbeafe"/>
+  <rect x="282" y="207" width="80" height="5" rx="1.5" fill="#1e293b"/>
+  <rect x="282" y="215" width="70" height="4" rx="1.5" fill="#94a3b8"/>
+  <rect x="282" y="221" width="60" height="4" rx="1.5" fill="#94a3b8"/>
+
+  <!-- CTA banner -->
+  <rect x="0" y="236" width="400" height="44" fill="url(#ctaGrad)"/>
+  <rect x="100" y="244" width="200" height="8" rx="2" fill="rgba(255,255,255,0.9)"/>
+  <rect x="130" y="256" width="140" height="5" rx="1.5" fill="rgba(255,255,255,0.55)"/>
+  <rect x="155" y="265" width="90" height="12" rx="6" fill="rgba(255,255,255,0.9)"/>
+  <rect x="170" y="269" width="60" height="4" rx="2" fill="#1e3c72"/>
+</svg>
