@@ -5,6 +5,7 @@ export interface SampleTemplateContent {
         tagline: string;
         ctaLabel: string;
         ctaUrl: string;
+        alignment?: "left" | "center" | "right" | "justify";
     };
     background: {
         type: "color" | "gradient";

@@ -11,6 +11,7 @@ export const defaultContent: SampleTemplateContent = {
       "A minimal, distraction-free starting point. Add your own words, style, and purpose.",
     ctaLabel: "Get Started",
     ctaUrl: "#",
+    alignment: "center",
   },
   background: {
     type: "gradient",

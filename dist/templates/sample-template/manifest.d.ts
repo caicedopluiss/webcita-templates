@@ -14,6 +14,9 @@ export declare const manifest: Readonly<{
         type: "group";
         name: string;
         label: string;
+        admin: {
+            alignable: true;
+        };
         fields: ({
             type: "text";
             name: string;
@@ -82,5 +85,6 @@ export declare const manifest: Readonly<{
             defaultValue?: undefined;
             options?: undefined;
         })[];
+        admin?: undefined;
     })[];
 }>;

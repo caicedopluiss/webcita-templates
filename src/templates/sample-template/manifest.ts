@@ -20,6 +20,9 @@ export const manifest = Object.freeze({
       type: "group",
       name: "hero",
       label: "Hero",
+      admin: {
+        alignable: true,
+      },
       fields: [
         {
           type: "text",
@@ -82,11 +85,11 @@ export const manifest = Object.freeze({
         {
           type: "text",
           name: "value",
-          label: "Value",
+          label: "CSS value",
           required: true,
           admin: {
             placeholder: "#3b82f6 or linear-gradient(...)",
-            description: "Any valid CSS background value.",
+            description: "Style input: any valid CSS background value.",
           },
         },
       ],

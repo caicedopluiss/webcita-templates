@@ -22,6 +22,8 @@ export interface FieldAdmin {
     placeholder?: string;
     /** Number of rows — textarea only. */
     rows?: number;
+    /** Show a single section-level text alignment control for this group. */
+    alignable?: boolean;
 }
 interface BaseField {
     /** Key path within the content object (dot-notation for nested, e.g. "hero.headline"). */
@@ -76,5 +78,7 @@ export type TemplateField = FlatTemplateField | GroupField | ArrayField;
 export interface TemplateEntry {
     readonly manifest: Readonly<TemplateManifest>;
     readonly mainView: React.ComponentType<any>;
+    /** Flat key-value map of default field values, keyed by dot-path matching the schema (e.g. "hero.headline"). */
+    readonly defaultValues?: Readonly<Record<string, string | boolean>>;
 }
 export {};

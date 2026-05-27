@@ -6,7 +6,8 @@ var r = {
 		headline: "Build something beautiful",
 		tagline: "A minimal, distraction-free starting point. Add your own words, style, and purpose.",
 		ctaLabel: "Get Started",
-		ctaUrl: "#"
+		ctaUrl: "#",
+		alignment: "center"
 	},
 	background: {
 		type: "gradient",
@@ -43,17 +44,27 @@ function s({ text: e }) {
 }
 //#endregion
 //#region src/templates/sample-template/components/HeroTagline.tsx
-function c({ text: e }) {
+function c({ text: e, alignment: n = "center" }) {
 	return /* @__PURE__ */ t("p", {
-		className: "relative text-white/80 max-w-xl mx-auto leading-relaxed mb-8 text-base",
+		className: `relative text-white/80 max-w-xl leading-relaxed mb-8 text-base ${{
+			left: "mr-auto",
+			center: "mx-auto",
+			right: "ml-auto",
+			justify: "mx-auto"
+		}[n]}`,
 		children: e
 	});
 }
 //#endregion
 //#region src/templates/sample-template/components/HeroActions.tsx
-function l({ cta: e, accentColor: n }) {
+function l({ cta: e, accentColor: n, alignment: r = "center" }) {
 	return /* @__PURE__ */ t("div", {
-		className: "flex flex-wrap items-center justify-center gap-4",
+		className: `flex flex-wrap items-center gap-4 ${{
+			left: "justify-start",
+			center: "justify-center",
+			right: "justify-end",
+			justify: "justify-center"
+		}[r]}`,
 		children: /* @__PURE__ */ t("a", {
 			href: e.url,
 			className: "relative inline-block bg-white font-extrabold text-sm px-8 py-3 rounded-xl no-underline shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200",
@@ -71,7 +82,12 @@ function u({ content: e, theme: u }) {
 	}, f = {
 		...i,
 		...u
-	}, { hero: p, background: m } = d;
+	}, { hero: p, background: m } = d, h = p.alignment ?? "center", g = {
+		left: "text-left",
+		center: "text-center",
+		right: "text-right",
+		justify: "text-justify"
+	}[h];
 	return /* @__PURE__ */ n("div", {
 		className: "min-h-screen w-full flex items-center justify-center relative overflow-hidden",
 		style: {
@@ -79,13 +95,17 @@ function u({ content: e, theme: u }) {
 			fontFamily: `"${f.fontFamily}", sans-serif`
 		},
 		children: [/* @__PURE__ */ t(a, {}), /* @__PURE__ */ n("div", {
-			className: "relative z-10 max-w-3xl mx-auto px-6 text-center",
+			className: `relative z-10 max-w-3xl mx-auto px-6 ${g}`,
 			children: [
 				p.badge && /* @__PURE__ */ t(o, { text: p.badge }),
 				/* @__PURE__ */ t(s, { text: p.headline }),
-				/* @__PURE__ */ t(c, { text: p.tagline }),
+				/* @__PURE__ */ t(c, {
+					text: p.tagline,
+					alignment: h
+				}),
 				/* @__PURE__ */ t(l, {
 					accentColor: f.accentColor,
+					alignment: h,
 					cta: {
 						label: p.ctaLabel,
 						url: p.ctaUrl
@@ -118,6 +138,7 @@ var d = Object.freeze({
 		type: "group",
 		name: "hero",
 		label: "Hero",
+		admin: { alignable: !0 },
 		fields: [
 			{
 				type: "text",
@@ -180,17 +201,27 @@ var d = Object.freeze({
 		}, {
 			type: "text",
 			name: "value",
-			label: "Value",
+			label: "CSS value",
 			required: !0,
 			admin: {
 				placeholder: "#3b82f6 or linear-gradient(...)",
-				description: "Any valid CSS background value."
+				description: "Style input: any valid CSS background value."
 			}
 		}]
 	}]
 }), f = Object.freeze({
 	manifest: d,
-	mainView: u
+	mainView: u,
+	defaultValues: Object.freeze({
+		"hero.badge": r.hero.badge ?? "",
+		"hero.headline": r.hero.headline,
+		"hero.tagline": r.hero.tagline,
+		"hero.ctaLabel": r.hero.ctaLabel,
+		"hero.ctaUrl": r.hero.ctaUrl,
+		"hero.alignment": r.hero.alignment ?? "center",
+		"background.type": r.background.type,
+		"background.value": r.background.value
+	})
 }), p = u;
 //#endregion
 export { p as n, f as t };

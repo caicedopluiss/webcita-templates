@@ -25,6 +25,14 @@ export default function Landing({ content, theme }: Props) {
   const resolvedTheme: SampleTemplateTheme = { ...defaultTheme, ...theme };
 
   const { hero, background } = resolvedContent;
+  const alignment = hero.alignment ?? "center";
+  const alignClassByValue: Record<typeof alignment, string> = {
+    left: "text-left",
+    center: "text-center",
+    right: "text-right",
+    justify: "text-justify",
+  };
+  const textAlignClass = alignClassByValue[alignment];
 
   return (
     <div
@@ -36,15 +44,16 @@ export default function Landing({ content, theme }: Props) {
     >
       <HeroBackground />
 
-      <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+      <div className={`relative z-10 max-w-3xl mx-auto px-6 ${textAlignClass}`}>
         {hero.badge && <HeroBadge text={hero.badge} />}
 
         <HeroHeadline text={hero.headline} />
 
-        <HeroTagline text={hero.tagline} />
+        <HeroTagline text={hero.tagline} alignment={alignment} />
 
         <HeroActions
           accentColor={resolvedTheme.accentColor}
+          alignment={alignment}
           cta={{ label: hero.ctaLabel, url: hero.ctaUrl }}
         />
       </div>
